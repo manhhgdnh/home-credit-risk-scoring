@@ -1,0 +1,9 @@
+table,expected_keys,all_keys_present
+application_train.csv,SK_ID_CURR,True
+application_test.csv,SK_ID_CURR,True
+bureau.csv,"SK_ID_CURR, SK_ID_BUREAU",True
+bureau_balance.csv,"SK_ID_BUREAU, MONTHS_BALANCE",True
+previous_application.csv,"SK_ID_CURR, SK_ID_PREV",True
+POS_CASH_balance.csv,"SK_ID_CURR, SK_ID_PREV, MONTHS_BALANCE",True
+credit_card_balance.csv,"SK_ID_CURR, SK_ID_PREV, MONTHS_BALANCE",True
+installments_payments.csv,"SK_ID_CURR, SK_ID_PREV",True
