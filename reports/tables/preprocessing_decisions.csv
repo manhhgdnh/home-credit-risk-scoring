@@ -1,0 +1,13 @@
+,feature_scope,issue,proposed_action,validation
+0,Identifier,SK_ID_CURR is not a predictor,Exclude from X; retain separately for traceability,Schema test
+1,Numerical missing values,Missingness is structured,Median imputation; test missing indicators for informative variables,Cross-validation
+2,Categorical missing values,Missing is often informative,Represent missing as an explicit category,Cross-validation
+3,DAYS_EMPLOYED,Sentinel value 365243,Replace sentinel with missing and create DAYS_EMPLOYED_ANOMALOUS,Unit test
+4,Skewed amounts,Strong right skew and extreme values,Evaluate log1p for linear models; do not remove extremes automatically,Cross-validation
+5,Categorical predictors,Unknown categories at inference,One-hot encoding with handle_unknown='ignore' for the linear baseline,Pipeline test
+6,Rare categorical levels,Unstable estimates,Evaluate grouping levels below 0.5%; learn groups only on training folds,Cross-validation
+7,Target or WOE encoding,High target-leakage risk,Use only out-of-fold encoding if evaluated,Leakage test
+8,Financial ratios,Invalid denominators and infinities,Use safe_divide and reproduce definitions inside feature engineering,Unit test
+9,Correlated predictors,Coefficient instability,Remove deterministic duplicates and use regularization for the logistic baseline,Cross-validation
+10,Numerical scale,Features have very different scales,Standardize after imputation for logistic regression; scaling is optional for trees,Pipeline test
+11,Class imbalance,TARGET=1 represents about 8.07%,Use stratified folds; compare class weights inside training only,"ROC-AUC, PR-AUC, recall and calibration"

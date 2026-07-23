@@ -1,0 +1,8 @@
+,feature_group,retain,exclude_or_compare,reason
+0,Applicant age,AGE_YEARS,DAYS_BIRTH,AGE_YEARS is an interpretable deterministic transformation of DAYS_BIRTH.
+1,Employment duration,EMPLOYMENT_YEARS + DAYS_EMPLOYED_ANOMALOUS,DAYS_EMPLOYED,The raw variable contains the 365243 sentinel; duration and anomaly should be represented separately.
+2,Registration recency,REGISTRATION_YEARS,DAYS_REGISTRATION,The two features contain the same information with opposite scale.
+3,Identity-document recency,ID_PUBLISH_YEARS,DAYS_ID_PUBLISH,The engineered feature has a clearer semantic interpretation.
+4,Credit payment structure,CREDIT_TERM_PROXY,ANNUITY_CREDIT_RATIO,They are exact monotonic inverses. CREDIT_TERM_PROXY has the larger univariate SMD.
+5,"Credit, goods and annuity amounts",Raw amounts and selected ratios initially,Evaluate removal through cross-validation,The variables are strongly correlated but have different business interpretations.
+6,External scores,EXT_SOURCE_1/2/3 + EXT_SOURCE_AVAILABLE_COUNT,Run an ablation without EXT_SOURCE features,"They are highly predictive, but availability and production-time validity must be confirmed."
