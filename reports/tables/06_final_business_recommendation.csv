@@ -1,0 +1,2 @@
+model,scenario,policy,score_cutoff,holdout_review_share,holdout_default_capture_rate,holdout_reviewed_default_rate,holdout_review_lift,holdout_savings_rate_vs_no_review
+hist_gradient_boosting,base_case,review_top_20pct,0.11759695430476645,0.19963253825016666,0.5299093655589124,0.21428571428571427,2.6544238239102285,0.100093991272239

@@ -1,0 +1,9 @@
+scenario,sample,selected_policy,expected_cost_per_application,savings_vs_no_review,savings_rate_vs_no_review
+base_case,development_oof,review_top_20pct,1.0945152190172678,28640.5,0.09614132259147365
+base_case,holdout,review_top_20pct,1.0897110710046665,7454.5,0.100093991272239
+high_default_loss,development_oof,review_top_30pct,1.6589521478976292,88384.5,0.17801510574018126
+high_default_loss,holdout,review_top_30pct,1.6578784774726436,22160.5,0.1785337361530715
+low_effectiveness,development_oof,no_review,0.8072908198107379,0.0,0.0
+low_effectiveness,holdout,no_review,0.8072776937710355,0.0,0.0
+moderate_value,development_oof,review_top_10pct,0.7707920067640077,8979.0,0.04521148036253776
+moderate_value,holdout,review_top_10pct,0.7686291725606881,2377.0,0.04787512588116818

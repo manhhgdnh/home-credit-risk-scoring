@@ -1,0 +1,5 @@
+policy,policy_type,target_review_share,score_cutoff,cutoff_source
+review_top_10pct,capacity_based,0.1,0.18073208725500908,development_oof_quantile
+review_top_20pct,capacity_based,0.2,0.11759695430476645,development_oof_quantile
+review_top_30pct,capacity_based,0.3,0.08559371891666892,development_oof_quantile
+oof_max_f1,diagnostic_comparator,,0.1434537179191276,development_oof_max_f1

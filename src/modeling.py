@@ -59,6 +59,18 @@ def make_tree_model(
     schema: FeatureSchema,
     random_state: int = 42,
 ) -> Pipeline:
+    """
+    Return a histogram gradient-boosting pipeline
+    with explicitly declared categorical features.
+    """
+    categorical_feature_indices = list(
+        range(
+            len(
+                schema.tree_categorical_features
+            )
+        )
+    )
+
     return Pipeline(
         steps=[
             (
@@ -75,6 +87,9 @@ def make_tree_model(
                     max_leaf_nodes=31,
                     min_samples_leaf=50,
                     l2_regularization=1.0,
+                    categorical_features=(
+                        categorical_feature_indices
+                    ),
                     random_state=random_state,
                 ),
             ),

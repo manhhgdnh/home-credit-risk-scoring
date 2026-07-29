@@ -1,0 +1,5 @@
+scenario,review_cost,default_loss,review_effectiveness
+low_effectiveness,1.0,10.0,0.2
+moderate_value,1.0,10.0,0.5
+base_case,1.0,15.0,0.5
+high_default_loss,1.0,25.0,0.5

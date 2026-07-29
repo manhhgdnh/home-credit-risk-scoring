@@ -155,13 +155,17 @@ def make_logistic_preprocessor(
 def make_tree_preprocessor(
     schema: FeatureSchema,
 ) -> ColumnTransformer:
-    """
-    Build the compact tree-model preprocessing stage.
-    """
     _validate_schema(schema)
 
     return ColumnTransformer(
         transformers=[
+            (
+                "categorical",
+                make_tree_categorical_preprocessor(),
+                list(
+                    schema.tree_categorical_features
+                ),
+            ),
             (
                 "numerical",
                 make_numerical_preprocessor(
@@ -169,13 +173,6 @@ def make_tree_preprocessor(
                 ),
                 list(
                     schema.tree_numerical_features
-                ),
-            ),
-            (
-                "categorical",
-                make_tree_categorical_preprocessor(),
-                list(
-                    schema.tree_categorical_features
                 ),
             ),
         ],
