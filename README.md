@@ -145,12 +145,9 @@ larger review capacities become preferable.
 credit-risk-scoring/
 ├── README.md
 ├── requirements.txt
-├── configs/
-│   └── model_config.yaml
 ├── data/
 │   ├── README.md
-│   ├── raw/                         # not versioned
-│   └── processed/                   # not versioned
+│   ├── raw/                         # not versioned                 
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
 │   ├── 02_eda.ipynb
@@ -165,13 +162,8 @@ credit-risk-scoring/
 │   ├── features.py
 │   ├── modeling.py
 │   ├── evaluation.py
-│   └── plots.py
-├── scripts/
-│   ├── run_pipeline.py
-│   └── validate_project.py
-└── reports/
-    ├── figures/
-    └── tables/
+
+
 ```
 
 ## Reproduction
