@@ -240,5 +240,7 @@ reason-code governance, drift monitoring and a controlled shadow-mode pilot.
 
 After the holdout evaluation is produced, do not tune features, hyperparameters,
 calibration or thresholds against the same holdout and report it as an unbiased
+
+Manh Hung Nguyen
 final test. Any further iteration requires a new validation design.
 
